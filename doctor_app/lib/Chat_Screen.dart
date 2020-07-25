@@ -37,6 +37,7 @@ class _ChatScreenPageState extends State<ChatScreenPage> {
     var heightD = queryData.size.height;
     return new Scaffold(
         bottomNavigationBar: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: BottomAppBar(
             color: Color(0xfffffffc),
             child: Container(
@@ -263,7 +264,7 @@ class _ChatScreenPageState extends State<ChatScreenPage> {
             children: <Widget>[
               SingleChildScrollView(
                 scrollDirection: Axis.vertical,
-                physics: NeverScrollableScrollPhysics(),
+                //physics: NeverScrollableScrollPhysics(),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -29,6 +29,7 @@ flutter:
   assets:
     - images/man_pic.jpg
     - images/consult.jpeg
+    - images/dr.jpeg
 
 
   fonts:

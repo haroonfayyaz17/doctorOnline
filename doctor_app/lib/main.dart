@@ -1,10 +1,11 @@
-import 'package:doctorapp/Chat_List.dart';
 import 'package:doctorapp/Chat_Screen.dart';
 import 'package:doctorapp/Register.dart';
-import 'package:doctorapp/SetupProfile.dart';
 import 'package:doctorapp/appointment.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'DentistSetupProfile.dart';
+import 'SetupProfile.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,7 +60,7 @@ class _Login extends State<Login> {
             ),
           ),
           Transform.translate(
-              //Used to display Doctor's Logo
+            //Used to display Doctor's Logo
               offset: Offset(79.0, 60.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -69,7 +70,7 @@ class _Login extends State<Login> {
                     height: 150.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage('images/consult.jpeg'),
+                        image: const AssetImage('images/dr.jpeg'),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -77,8 +78,8 @@ class _Login extends State<Login> {
                 ],
               )),
           Transform.translate(
-              //Used to display Login Logo
-              offset: Offset(155.0, 210.0),
+            //Used to display Login Logo
+              offset: Offset(155.0, 215.0),
               child: Column(
                 children: <Widget>[
                   Container(
@@ -96,39 +97,39 @@ class _Login extends State<Login> {
                 ],
               )),
           Transform.translate(
-              //Used to display textbox and hint for email/username
+            //Used to display textbox and hint for email/username
               offset: Offset(15, 270),
               child: Column(
                 children: <Widget>[
                   Container(
                       child: TextFormField(
-                    textCapitalization: TextCapitalization.words,
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(),
-                      filled: false,
-                      icon: Icon(Icons.email),
-                      hintText: 'Username/Email',
-                    ),
-                    textAlign: TextAlign.left,
-                  ))
+                        textCapitalization: TextCapitalization.words,
+                        decoration: InputDecoration(
+                          border: UnderlineInputBorder(),
+                          filled: false,
+                          icon: Icon(Icons.email),
+                          hintText: 'Username/Email',
+                        ),
+                        textAlign: TextAlign.left,
+                      ))
                 ],
               )),
           Transform.translate(
-              //Used to display textbox and hint for Password
+            //Used to display textbox and hint for Password
               offset: Offset(15, 360),
               child: Column(
                 children: <Widget>[
                   Container(
                       child: TextFormField(
-                    textCapitalization: TextCapitalization.words,
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(),
-                      filled: false,
-                      icon: Icon(Icons.lock),
-                      hintText: 'Password',
-                    ),
-                    textAlign: TextAlign.left,
-                  ))
+                        textCapitalization: TextCapitalization.words,
+                        decoration: InputDecoration(
+                          border: UnderlineInputBorder(),
+                          filled: false,
+                          icon: Icon(Icons.lock),
+                          hintText: 'Password',
+                        ),
+                        textAlign: TextAlign.left,
+                      ))
                 ],
               )),
           Transform.translate(
@@ -139,7 +140,7 @@ class _Login extends State<Login> {
                 RaisedButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => SetupProfileClass()));
+                        MaterialPageRoute(builder: (context) =>new appointment()));
                   },
                   textColor: Colors.white,
                   padding: const EdgeInsets.all(0.0),
@@ -170,7 +171,7 @@ class _Login extends State<Login> {
             ),
           ),
           Transform.translate(
-              //Used to display "Do not have an Account?" label
+            //Used to display "Do not have an Account?" label
               offset: Offset(85.0, 550.0),
               child: Column(
                 children: <Widget>[
@@ -188,14 +189,14 @@ class _Login extends State<Login> {
                 ],
               )),
           Transform.translate(
-              //Used to display "Register" label when pressed
+            //Used to display "Register" label when pressed
               offset: Offset(250.0, 535.0),
               child: Column(
                 children: <Widget>[
                   Container(
                     child: FlatButton(
                       child: Text(
-                        'Register',
+                        'Sign Up',
                         style: TextStyle(
                           fontFamily: 'Oxygen',
                           fontSize: 16,
@@ -205,7 +206,7 @@ class _Login extends State<Login> {
                       ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => SignUpClass()));
+                         builder: (context) => SignUpClass()));
                       },
                     ),
                   )

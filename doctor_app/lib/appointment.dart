@@ -1,11 +1,10 @@
+import 'package:doctorapp/set_appointment.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:doctorapp/appointment_class.dart';
 import 'appointment_class.dart';
 
-
-
 class appointment extends StatelessWidget {
-
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +50,9 @@ class appointment extends StatelessWidget {
     return MaterialApp(
 
       debugShowCheckedModeBanner: false,
+        routes: <String,WidgetBuilder>{
+        '/setAppointment':(BuildContext context)=> new set_appointment(),
+        },
       theme: ThemeData(
         primaryColor: Color(0xFF4E45FF),
         accentColor: Color(0xFF4E45FF),
@@ -179,15 +181,7 @@ class appointment extends StatelessWidget {
                                               ),
                                             ),
                                             onPressed: (){
-                                              showDatePicker(
-                                                context: context,
-                                                initialDate: DateTime.now(),
-                                                firstDate: DateTime(2018),
-                                                lastDate: DateTime(2025),
-                                              ).then((value){
-
-                                              }
-                                              );
+                                              Navigator.of(context).pushNamed('/setAppointment');
                                             },
                                           ),
                                         ),
